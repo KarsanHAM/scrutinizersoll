@@ -1,0 +1,138 @@
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>appReducer.test.ts</title>
+      <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" type="text/css" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.2/codemirror.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.2/mode/javascript/javascript.min.js" type="text/javascript" charset="utf-8"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.2/codemirror.min.css" type="text/css" rel="stylesheet">
+<script src="../../../../../assets/source-file.js" type="text/javascript" charset="utf-8"></script>
+<link href="../../../../../assets/source-file.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+    <div style="margin-top:3em" class="ui container"><h1 class="ui header"><a href="../../../../../index.html">TypeScript coverage report</a></h1><table style="margin-top:2em" class="ui celled table"><thead class=""><tr class=""><th class="">Filename</th><th class="">Percent</th><th class="">Threshold</th><th class="">Total</th><th class="">Covered</th><th class="">Uncovered</th></tr></thead><tbody class=""><tr class="positive"><td class="">public/typescript/reducer/__test__/appReducer.test.ts</td><td class="">100.00%</td><td class="">80%</td><td class="">231</td><td class="">231</td><td class="">0</td></tr></tbody></table><textarea id="editor" readonly="" style="margin-top:3em">import &#x27;jest&#x27;;
+import { ApplicationAction, ApplicationEvent, ApplicationState, RequestInformation } from &#x27;../../model&#x27;;
+import { appReducer } from &#x27;../appReducer&#x27;;
+import { encode } from &#x27;urlsafe-base64&#x27;;
+
+describe(&#x27;appReducer&#x27;, () =&gt; {
+  let initialState: ApplicationState | undefined;
+  const requestInformation: RequestInformation = {
+    hostname: &#x27;webauthn.test&#x27;,
+    ipAddress: &#x27;192.168.77.1&#x27;,
+    requestId: &#x27;e54e303f5032c52762175f0b99b69168&#x27;,
+    sari: &#x27;_7aff65182b9eb8119ef3531e07b8b6d02d5f7d289e4ab67489548b21c52f&#x27;,
+    supportEmail: &#x27;support@support.nl&#x27;,
+    userAgent: &#x27;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36&#x27;,
+  };
+  beforeEach(() =&gt; {
+    initialState = {
+      started: false,
+      errorInfo: null,
+      message: &#x27;initial&#x27;,
+      requestInformation,
+    };
+  });
+
+  function state() {
+    return initialState!;
+  }
+
+  describe(&#x27;ApplicationEvent.REQUEST_USER_FOR_ASSERTION&#x27;, () =&gt; {
+    const action = { value: null, timestamp: &#x27;now&#x27;, type: ApplicationEvent.REQUEST_USER_FOR_ASSERTION };
+    shouldNotAlterState(state, action);
+    shouldNothaveAnError(state, action);
+    shouldSetMessageTo(state, action, &#x27;status.authentication_initial&#x27;);
+    shouldBeStarted(state, action);
+  });
+
+  describe(&#x27;ApplicationEvent.REQUEST_USER_FOR_ATTESTATION&#x27;, () =&gt; {
+    const action = { value: null, timestamp: &#x27;now&#x27;, type: ApplicationEvent.REQUEST_USER_FOR_ATTESTATION };
+    shouldNotAlterState(state, action);
+    shouldNothaveAnError(state, action);
+    shouldSetMessageTo(state, action, &#x27;status.registration_initial&#x27;);
+    shouldBeStarted(state, action);
+  });
+
+  describe(&#x27;ApplicationEvent.PUBLIC_KEY_CREDENTIALS_SERIALIZED&#x27;, () =&gt; {
+    const value = {
+      response: {
+        clientDataJSON: encode(new Buffer(&#x27;123&#x27;)),
+      },
+    };
+    const action = { value, timestamp: &#x27;now&#x27;, type: ApplicationEvent.PUBLIC_KEY_CREDENTIALS_SERIALIZED };
+    shouldNotAlterState(state, action);
+    shouldNothaveAnError(state, action);
+    shouldBeStarted(state, action);
+    it(&#x27;Should decode clientDataJSON&#x27;, () =&gt; {
+      const result = appReducer(initialState!, action);
+      expect(result.clientDataJSON).toEqual(&#x27;123&#x27;);
+    });
+  });
+
+  describe(&#x27;ApplicationEvent.NOT_SUPPORTED&#x27;, () =&gt; {
+    const action = { value: null, timestamp: &#x27;now&#x27;, type: ApplicationEvent.NOT_SUPPORTED };
+    shouldNotAlterState(state, action);
+    shouldNotDisplayRetryAndMailToButton(state, action);
+    shouldSetMessageTo(state, action, &#x27;status.webauthn_not_supported&#x27;);
+    shouldBeStarted(state, action);
+  });
+
+  describe(&#x27;ApplicationEvent.ERROR&#x27;, () =&gt; {
+    const action = { value: null, timestamp: &#x27;now&#x27;, type: ApplicationEvent.ERROR };
+    shouldNotAlterState(state, action);
+    shouldDisplayMailAndRetryButton(state, action);
+    shouldSetMessageTo(state, action, &#x27;status.general_error&#x27;);
+    shouldBeStarted(state, action);
+  });
+});
+
+function shouldNothaveAnError(initialState: () =&gt; ApplicationState, action: ApplicationAction) {
+  it(&#x27;Should not have an error&#x27;, () =&gt; {
+    const result = appReducer(initialState(), action);
+    expect(result.errorInfo).toBeNull();
+  });
+}
+
+function shouldNotDisplayRetryAndMailToButton(initialState: () =&gt; ApplicationState, action: ApplicationAction) {
+  it(&#x27;Should not display retry and mailto button&#x27;, () =&gt; {
+    const result = appReducer(initialState(), action);
+    expect(result.errorInfo!.showRetry).toBeFalsy();
+    expect(result.errorInfo!.showMailTo).toBeFalsy();
+  });
+}
+
+function shouldDisplayMailAndRetryButton(initialState: () =&gt; ApplicationState, action: ApplicationAction) {
+  it(&#x27;Should display mailto and retry button&#x27;, () =&gt; {
+    const result = appReducer(initialState(), action);
+    expect(result.errorInfo!.showRetry).toBeTruthy();
+    expect(result.errorInfo!.showMailTo).toBeTruthy();
+  });
+}
+
+function shouldNotAlterState(initialState: () =&gt; ApplicationState, action: ApplicationAction) {
+  it(&#x27;Should not alter initial state&#x27;, () =&gt; {
+    const result = appReducer(initialState(), action);
+    expect(result).not.toBe(initialState);
+  });
+}
+
+function shouldSetMessageTo(initialState: () =&gt; ApplicationState, action: ApplicationAction, message: string) {
+  it(`Should display ${message}`, () =&gt; {
+    const result = appReducer(initialState(), action);
+    expect(result.message).toEqual(message);
+  });
+}
+
+function shouldBeStarted(initialState: () =&gt; ApplicationState, action: ApplicationAction) {
+  it(&#x27;Should be started&#x27;, () =&gt; {
+    const result = appReducer(initialState(), action);
+    expect(result.started).toBeTruthy();
+  });
+}
+</textarea><pre id="annotations" style="display:none">[]</pre></div>
+    <p class="footer-text">TypeScript Coverage Report generated by <a href="https://github.com/plantain-00/type-coverage">type-coverage</a> and <a href="https://github.com/alexcanessa/typescript-coverage-report">typescript-coverage-report</a> at Mon, 12 Feb 2024 21:26:24 GMT</p>
+    </body>
+  </html>
+  

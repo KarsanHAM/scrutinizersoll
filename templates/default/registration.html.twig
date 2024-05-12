@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>{{ 'registration.sub_title'|trans }}</h2>
+
+    <form
+            {{ stimulus_controller('@web-auth/webauthn-stimulus',
+                {
+                    creationResultUrl: path('attestation-verification'),
+                    creationOptionsUrl: path('attestation-options')
+                }
+            ) }}
+    >
+        <input
+                type="hidden"
+                name="username"
+                id="username"
+                value="{{ userEntity.name() }}"
+        >
+        <input
+                    type="hidden"
+                    name="displayName"
+                    id="inputDisplayName"
+                    value="{{ userEntity.displayName() }}"
+        >
+        <button id="registerButton" {{ stimulus_controller('registration') }}
+                {{ stimulus_action('@web-auth/webauthn-stimulus', 'signup') }}
+        hidden>
+
+        </button>
+    </form>
+
+    <script>
+        window.onload = function(){
+            document.getElementById("registerButton").click();
+        }
+    </script>
+
+    {% include 'default/variables.twig' %}
+
+{% endblock %}

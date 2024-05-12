@@ -1,0 +1,498 @@
+{
+  "fileCounts": {
+    "public/typescript/function/createErrorCode.ts": {
+      "correctCount": 32,
+      "totalCount": 32
+    },
+    "public/typescript/function/translations.ts": {
+      "correctCount": 7,
+      "totalCount": 7
+    },
+    "public/typescript/function/index.ts": {
+      "correctCount": 12,
+      "totalCount": 16
+    },
+    "public/typescript/model/application.ts": {
+      "correctCount": 48,
+      "totalCount": 48
+    },
+    "public/typescript/model/webauthn.ts": {
+      "correctCount": 43,
+      "totalCount": 43
+    },
+    "public/typescript/model/index.ts": {
+      "correctCount": 0,
+      "totalCount": 0
+    },
+    "public/typescript/model/response.ts": {
+      "correctCount": 5,
+      "totalCount": 5
+    },
+    "public/typescript/reducer/serverResponseErrorReducer.ts": {
+      "correctCount": 82,
+      "totalCount": 83
+    },
+    "public/typescript/reducer/appReducer.ts": {
+      "correctCount": 79,
+      "totalCount": 79
+    },
+    "public/typescript/reducer/loggingAppReducerDecorator.ts": {
+      "correctCount": 33,
+      "totalCount": 33
+    },
+    "public/typescript/ui/hook/useAppReducer.ts": {
+      "correctCount": 18,
+      "totalCount": 18
+    },
+    "public/typescript/function/http.ts": {
+      "correctCount": 10,
+      "totalCount": 17
+    },
+    "public/typescript/serialisation/common.ts": {
+      "correctCount": 60,
+      "totalCount": 60
+    },
+    "public/typescript/serialisation/AuthenticatorAttestationResponse.ts": {
+      "correctCount": 68,
+      "totalCount": 74
+    },
+    "public/typescript/serialisation/PublicKeyCredentialCreationOptions.ts": {
+      "correctCount": 56,
+      "totalCount": 56
+    },
+    "public/typescript/serialisation/SerializedPublicKeyCredential.ts": {
+      "correctCount": 22,
+      "totalCount": 37
+    },
+    "public/typescript/serialisation/index.ts": {
+      "correctCount": 0,
+      "totalCount": 0
+    },
+    "public/typescript/operator/webauthn.ts": {
+      "correctCount": 145,
+      "totalCount": 145
+    },
+    "public/typescript/operator/logic.ts": {
+      "correctCount": 59,
+      "totalCount": 59
+    },
+    "public/typescript/operator/sendPublicKeyCredentialsToServer.ts": {
+      "correctCount": 47,
+      "totalCount": 47
+    },
+    "public/typescript/operator/index.ts": {
+      "correctCount": 0,
+      "totalCount": 0
+    },
+    "public/typescript/observable/authenticationHandler.ts": {
+      "correctCount": 74,
+      "totalCount": 77
+    },
+    "public/typescript/observable/registrationHandler.ts": {
+      "correctCount": 73,
+      "totalCount": 75
+    },
+    "public/typescript/observable/index.ts": {
+      "correctCount": 0,
+      "totalCount": 0
+    },
+    "public/typescript/ui/hook/useAuthenticationEffect.ts": {
+      "correctCount": 53,
+      "totalCount": 53
+    },
+    "public/typescript/observable/startRegistration.ts": {
+      "correctCount": 44,
+      "totalCount": 44
+    },
+    "public/typescript/ui/hook/useRegistrationEffect.ts": {
+      "correctCount": 31,
+      "totalCount": 31
+    },
+    "public/typescript/ui/hook/index.ts": {
+      "correctCount": 15,
+      "totalCount": 15
+    },
+    "public/typescript/ui/hook/useVerifyPublicKeyCredentials.ts": {
+      "correctCount": 18,
+      "totalCount": 18
+    },
+    "public/typescript/ui/component/MailToLink.tsx": {
+      "correctCount": 58,
+      "totalCount": 58
+    },
+    "public/typescript/ui/component/ErrorTable.tsx": {
+      "correctCount": 109,
+      "totalCount": 109
+    },
+    "public/typescript/ui/component/App.tsx": {
+      "correctCount": 64,
+      "totalCount": 64
+    },
+    "public/typescript/observable/startAuthentication.ts": {
+      "correctCount": 44,
+      "totalCount": 44
+    },
+    "public/typescript/ui/component/AuthenticationContainer.tsx": {
+      "correctCount": 79,
+      "totalCount": 79
+    },
+    "public/typescript/authentication.tsx": {
+      "correctCount": 24,
+      "totalCount": 24
+    },
+    "public/typescript/ui/component/RegistrationContainer.tsx": {
+      "correctCount": 79,
+      "totalCount": 79
+    },
+    "public/typescript/registration.tsx": {
+      "correctCount": 24,
+      "totalCount": 24
+    },
+    "public/typescript/function/__test__/createErrorCode.ts": {
+      "correctCount": 23,
+      "totalCount": 23
+    },
+    "public/typescript/operator/__test__/webauthn.test.ts": {
+      "correctCount": 62,
+      "totalCount": 62
+    },
+    "public/typescript/reducer/__test__/appReducer.test.ts": {
+      "correctCount": 231,
+      "totalCount": 231
+    },
+    "public/typescript/serialisation/__test__/AuthenticatorAttestationResponse.test.ts": {
+      "correctCount": 31,
+      "totalCount": 31
+    },
+    "public/typescript/serialisation/__test__/PublicKeyCredentialCreationOption.test.ts": {
+      "correctCount": 55,
+      "totalCount": 55
+    },
+    "public/typescript/serialisation/__test__/common.test.ts": {
+      "correctCount": 79,
+      "totalCount": 79
+    },
+    "public/typescript/serialisation/__test__/serializePublicKeyCredential.test.ts": {
+      "correctCount": 100,
+      "totalCount": 100
+    },
+    "public/typescript/ui/component/__test__/MailToLink.test.tsx": {
+      "correctCount": 43,
+      "totalCount": 49
+    }
+  },
+  "anys": [
+    {
+      "file": "public/typescript/function/index.ts",
+      "line": 3,
+      "character": 105,
+      "text": "key",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/function/index.ts",
+      "line": 3,
+      "character": 118,
+      "text": "key",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/function/index.ts",
+      "line": 3,
+      "character": 125,
+      "text": "key",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/function/index.ts",
+      "line": 3,
+      "character": 129,
+      "text": "type",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/reducer/serverResponseErrorReducer.ts",
+      "line": 18,
+      "character": 41,
+      "text": "data",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/function/http.ts",
+      "line": 5,
+      "character": 33,
+      "text": "response",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/function/http.ts",
+      "line": 6,
+      "character": 8,
+      "text": "response",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/function/http.ts",
+      "line": 9,
+      "character": 13,
+      "text": "response",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/function/http.ts",
+      "line": 9,
+      "character": 22,
+      "text": "data",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/function/http.ts",
+      "line": 12,
+      "character": 9,
+      "text": "response",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/function/http.ts",
+      "line": 12,
+      "character": 18,
+      "text": "data",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/function/http.ts",
+      "line": 12,
+      "character": 23,
+      "text": "status",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/AuthenticatorAttestationResponse.ts",
+      "line": 10,
+      "character": 59,
+      "text": "clientDataJSON",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/AuthenticatorAttestationResponse.ts",
+      "line": 10,
+      "character": 75,
+      "text": "attestationObject",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/AuthenticatorAttestationResponse.ts",
+      "line": 11,
+      "character": 2,
+      "text": "clientDataJSON",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/AuthenticatorAttestationResponse.ts",
+      "line": 12,
+      "character": 2,
+      "text": "attestationObject",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/AuthenticatorAttestationResponse.ts",
+      "line": 14,
+      "character": 5,
+      "text": "clientDataJSON",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/AuthenticatorAttestationResponse.ts",
+      "line": 14,
+      "character": 21,
+      "text": "attestationObject",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/SerializedPublicKeyCredential.ts",
+      "line": 7,
+      "character": 46,
+      "text": "id",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/SerializedPublicKeyCredential.ts",
+      "line": 7,
+      "character": 50,
+      "text": "rawId",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/SerializedPublicKeyCredential.ts",
+      "line": 7,
+      "character": 57,
+      "text": "response",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/SerializedPublicKeyCredential.ts",
+      "line": 7,
+      "character": 67,
+      "text": "type",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/SerializedPublicKeyCredential.ts",
+      "line": 7,
+      "character": 73,
+      "text": "getClientExtensionResults",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/SerializedPublicKeyCredential.ts",
+      "line": 8,
+      "character": 2,
+      "text": "id",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/SerializedPublicKeyCredential.ts",
+      "line": 9,
+      "character": 2,
+      "text": "rawId",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/SerializedPublicKeyCredential.ts",
+      "line": 10,
+      "character": 2,
+      "text": "response",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/SerializedPublicKeyCredential.ts",
+      "line": 11,
+      "character": 2,
+      "text": "type",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/SerializedPublicKeyCredential.ts",
+      "line": 12,
+      "character": 2,
+      "text": "getClientExtensionResults",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/SerializedPublicKeyCredential.ts",
+      "line": 20,
+      "character": 5,
+      "text": "id",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/SerializedPublicKeyCredential.ts",
+      "line": 20,
+      "character": 9,
+      "text": "rawId",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/SerializedPublicKeyCredential.ts",
+      "line": 20,
+      "character": 16,
+      "text": "response",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/SerializedPublicKeyCredential.ts",
+      "line": 20,
+      "character": 26,
+      "text": "type",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/serialisation/SerializedPublicKeyCredential.ts",
+      "line": 20,
+      "character": 33,
+      "text": "getClientExtensionResults",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/observable/authenticationHandler.ts",
+      "line": 30,
+      "character": 69,
+      "text": "value",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/observable/authenticationHandler.ts",
+      "line": 47,
+      "character": 18,
+      "text": "error",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/observable/authenticationHandler.ts",
+      "line": 47,
+      "character": 45,
+      "text": "error",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/observable/registrationHandler.ts",
+      "line": 35,
+      "character": 18,
+      "text": "error",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/observable/registrationHandler.ts",
+      "line": 35,
+      "character": 45,
+      "text": "error",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/ui/component/__test__/MailToLink.test.tsx",
+      "line": 21,
+      "character": 8,
+      "text": "result",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/ui/component/__test__/MailToLink.test.tsx",
+      "line": 22,
+      "character": 9,
+      "text": "result",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/ui/component/__test__/MailToLink.test.tsx",
+      "line": 22,
+      "character": 16,
+      "text": "type",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/ui/component/__test__/MailToLink.test.tsx",
+      "line": 23,
+      "character": 26,
+      "text": "result",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/ui/component/__test__/MailToLink.test.tsx",
+      "line": 23,
+      "character": 33,
+      "text": "props",
+      "kind": 1
+    },
+    {
+      "file": "public/typescript/ui/component/__test__/MailToLink.test.tsx",
+      "line": 23,
+      "character": 39,
+      "text": "href",
+      "kind": 1
+    }
+  ],
+  "percentage": 98.07271134472185,
+  "total": 2283,
+  "covered": 2239,
+  "uncovered": 44
+}
